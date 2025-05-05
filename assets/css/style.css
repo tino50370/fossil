@@ -47,7 +47,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
-  --color-primary: #003b05;
+  --color-primary: #1d381d;
   --color-secondary: #1F1F25;
   --color-body: #6B6B6B;
   --color-heading-1: #FFFFFF;
@@ -12505,7 +12505,7 @@ header.header-three {
 header.header-three .logo-area {
   width: 346px;
   background: #fff;
-  padding: 46px 50px;
+  padding: 15px 50px;
   border-radius: 0 0 30px 0;
   display: flex;
   align-items: center;
@@ -12768,7 +12768,7 @@ header.header-two.sticky .header-top {
 }
 
 header.header-three.sticky .logo-area {
-  padding: 20px 50px;
+  padding: 10px 50px;
 }
 
 header.header-three.sticky .has-dropdown.mega-menu:hover .rts-mega-menu {
@@ -14281,13 +14281,13 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background-image: url(../images/banner/14.webp);
 }
 .rts-banner-three.three {
-  background-image: url(../images/banner/01.webp);
+  background-image: url(../images/banner/13.webp);
 }
 .rts-banner-three.four {
   background-image: url(../images/banner/12.webp);
 }
 .rts-banner-three.five {
-  background-image: url(../images/banner/13.webp);
+  background-image: url(../images/banner/01.webp);
 }
 @media only screen and (max-width: 767px) {
   .rts-banner-three {
@@ -20183,7 +20183,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 .bg-dark-2 {
-  background: #1E1E20;
+  background: #000801;
 }
 
 .title-style-three-center {
