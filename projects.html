@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+    <title>Fossil Contracting</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" preload href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" preload href="assets/css/plugins/aos.css">
+    <!-- swiper css-->
+    <link rel="stylesheet" preload href="assets/css/plugins/odometer.css">
+    <link rel="stylesheet" preload href="assets/css/plugins/swiper.css">
+    <link rel="stylesheet" preload href="assets/css/plugins/metismenu.css">
+    <link rel="stylesheet" preload href="assets/css/plugins/magnifying-popup.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" preload href="assets/css/vendor/bootstrap.min.css">
+    <!-- custom css here -->
+    <link rel="stylesheet" preload href="assets/css/style.css">
+    <style>
+        .top-scrollbar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        
+        .scrollbar-thumb {
+            height: 100%;
+            background: #1d381d;
+            border-radius: 10px;
+            width: 30%;
+            position: absolute;
+            left: 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .scrollbar-thumb:hover {
+            background: #1d381d;
+        }
+
+         .tabs-scroll-container {
+            overflow-x: auto;
+            scrollbar-width: none;
+            scrollbar-color: #1d381d;
+            padding-bottom: 15px;
+            position: relative;
+            user-select: none; 
+            -webkit-user-select: none;
+        }
+        
+        .tabs-scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .tabs-scroll-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .tabs-scroll-container::-webkit-scrollbar-thumb {
+            background: #1d381d;
+            border-radius: 10px;
+        }
+        
+        .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            min-width: max-content;
+            user-select: none; 
+            -webkit-user-select: none;
+        }
+        
+        .nav-item {
+            margin: 0 8px;
+            flex-shrink: 0;
+            user-select: none; 
+            -webkit-user-select: none;
+        }
+        
+        .nav-link {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            user-select: none; 
+            -webkit-user-select: none;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-link.active {
+            background: #1d381d;
+            box-shadow: 0 4px 20px rgba(255, 75, 43, 0.4);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .nav-link:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header area start -->
+    <header class="header-three header--sticky">
+        <div class="logo-area">
+            <a href="#">
+                <img src="assets/images/logo/01.svg" alt="">
+            </a>
+        </div>
+        <div class="nav-area">
+            <ul class="">
+                <li class="main-nav">
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="main-nav">
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li class="main-nav has-dropdown mega-menu">
+                    <a href="services.html">Services</a>
+                    <div class="rts-mega-menu service-mega-menu-style">
+                        <div class="wrapper">
+                            <div class="container">
+                                <div class="row g-5">
+                                    <div class="col-lg-4">
+                                        <ul class="mega-menu-item parent-nav">
+                                            <li>
+                                                <a href="service-single.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/04.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Infrastructure Development</h5>
+                                                            <p class="details">
+                                                                Fossil Contracting delivers turnkey infrastructure solutions across agriculture, mining, residential, and industrial sectors.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-two.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/05.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Land Development</h5>
+                                                            <p class="details">
+                                                                Fossil Contracting excels in land development via PPPs, delivering turnkey urban infrastructure solutions collaboratively.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-three.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/06.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Concrete Works</h5>
+                                                            <p class="details">
+                                                                Fossil delivers advanced concrete works using specialist designs, onsite batching, and diverse construction technologies.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-three.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/06.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Asphalt Plant</h5>
+                                                            <p class="details">
+                                                                Fossil operates stationary and mobile asphalt plants, delivering 300 tons/hour to meet diverse market needs.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <ul class="mega-menu-item parent-nav">
+                                            <li>
+                                                <a href="service-single-four.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/07.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Road Construction</h5>
+                                                            <p class="details">
+                                                                Fossil builds and rehabilitates flexible, rigid, and gravel roads, plus drainage and bridge infrastructure nationwide.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-five.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/09.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Earth Works
+                                                            </h5>
+                                                            <p class="details">
+                                                                Fossil handles bulk earthworks across Zimbabwe, including mining, dam desilting, and large-scale excavations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-five.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/09.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Building Works
+                                                            </h5>
+                                                            <p class="details">
+                                                                Fossil delivers world-class residential projects through a skilled building team meeting top client standards.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="service-single-five.html">
+                                                    <div class="single-service-menu">
+                                                        <div class="icon">
+                                                            <img src="assets/images/service/09.svg"
+                                                                alt="service">
+                                                        </div>
+                                                        <div class="info">
+                                                            <h5 class="title">Plant Hire
+                                                            </h5>
+                                                            <p class="details">
+                                                                Fossil hires out plant equipment for earthworks, dam and road construction, and mining sector operations.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="menu-thumb pl--20">
+                                            <img src="assets/images/service/10.webp" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="main-nav">
+                    <a href="#">Projects</a>
+                </li>
+                <li class="main-nav">
+                    <a href="#">Our Team</a>
+                </li>
+                <li class="main-nav"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="header-end">
+            <!-- <a href="appoinment.html" class="rts-btn btn-primary">Make Appointment</a> -->
+            <div class="nav-btn menu-btn" id="menu-btn">
+                <img src="assets/images/logo/bar.svg" alt="nav-iamge">
+            </div>
+        </div>
+    </header>
+    <!-- header area end -->
+
+    <div id="side-bar" class="side-bar header-two">
+        <button class="close-icon-menu"><i class="far fa-times"></i></button>
+        <!-- inner menu area desktop start -->
+        <div class="inner-main-wrapper-desk">
+            <div class="thumbnail">
+                <img src="assets/images/banner/04.jpg" alt="elevate">
+            </div>
+            <div class="inner-content">
+                <h4 class="title"></h4>
+                <p class="disc">
+                    
+                </p>
+                <div class="footer">
+                    <h4 class="title">Got a project in mind?</h4>
+                    <a href="contact.html" class="rts-btn btn-primary">Let's talk</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu area start -->
+        <div class="mobile-menu d-block d-xl-none">
+            <nav class="nav-main mainmenu-nav mt--30">
+                <ul class="mainmenu metismenu" id="mobile-menu-active">
+                    <li>
+                        <a href="index.html" class="main">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="main">About Us</a>
+                    </li>
+                    <li class="has-droupdown">
+                        <a href="services.html" class="main">Services</a>
+                        <ul class="submenu mm-collapse">
+                            <li><a class="mobile-menu-link" href="service.html">Infrastructure Development</a></li>
+                            <li><a class="mobile-menu-link" href="service-single.html">Land Development</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-two.html">Concrete Works</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-three.html">Asphalt Plant</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-four.html">Road Construction</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-five.html">Earth Works</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-four.html">Building Works</a></li>
+                            <li><a class="mobile-menu-link" href="service-single-five.html">Plant Hire</a></li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="#" class="main">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" class="main">Our Team</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="main">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="social-wrapper-one">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- mobile menu area end -->
+    </div>
+    <!-- header area end -->
+
+    <!-- rts banner area strart -->
+    <div class="rts-banner-area rts-section-gap rts-breadcrumb-area pd-bread  position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-area-inner">
+                        <span class="water-text">Details</span>
+                        <h1 class="title">
+                            Dedicated to Building Dreams,
+                            Crafting Quality
+                        </h1>
+                        <div class="nav-area-navigation">
+                            <a href="#">home</a>
+                            <a class="current" href="#">Project Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts banner area end -->
+
+
+    <!-- rts projects area start -->
+    <div class="rts-projects-area-inner rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-scrollbar">
+                        <div class="scrollbar-thumb" id="scrollbarThumb"></div>
+                    </div>
+                    <div class="tabs-scroll-container" id="tabsScrollContainer">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="trabablas-tab" data-bs-toggle="tab"
+                                    data-bs-target="#trabablas-tab-pane" type="button" role="tab" aria-controls="trabablas-tab-pane"
+                                    aria-selected="true">TRABABLAS INTERCHANGE</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="hre-chi-tab" data-bs-toggle="tab"
+                                    data-bs-target="#hre-chi-tab-pane" type="button" role="tab"
+                                    aria-controls="hre-chi-tab-pane" aria-selected="false">HARARE-CHIRUNDU ROAD UPGRADING & WIDENING</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="defe-tab" data-bs-toggle="tab"
+                                    data-bs-target="#defe-tab-pane" type="button" role="tab"
+                                    aria-controls="defe-tab-pane" aria-selected="false">DEFE DOPOTA DAM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="gdi-tab" data-bs-toggle="tab"
+                                    data-bs-target="#gdi-tab-pane" type="button" role="tab"
+                                    aria-controls="gdi-tab-pane" aria-selected="false">GREAT DYKE INVESTMENTS PROJECT</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="home-tab2" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                    aria-selected="false">HARARE-BEITBRIDGE ROAD</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">FREDA REBEECA PROJECT</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">ZIMPLATS 56-59KM ROAD REHABILITATION NGEZI</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="disabled-tab2" data-bs-toggle="tab"
+                                    data-bs-target="#disabled-tab-pane" type="button" role="tab"
+                                    aria-controls="disabled-tab-pane" aria-selected="false">DEVELOPMENT OF STANDS FOR BANC ABC</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="home-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                    aria-selected="false">DEVELOPMENT OF STANDS FOR CBZ BARRINGTON</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">SEWER PONDS IN TURF FOR NGEZI</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">REHABILITATION OF NGEZI-SELOUS ROAD 0-13KM</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="trabablas-tab-pane" role="tabpanel"
+                            aria-labelledby="trabablas-tab" tabindex="0">
+
+                            <div class="project-details-wrapper-image-top">
+                                <div class="container">
+                                    <div class="row g-0">
+                                        <div class="col-lg-8">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/29.webp" alt="Trabablas Interchange">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pl--20 pl_md--0 pl_sm--0">
+                                            <div class="thumbnail mb--10 mt_md--10 mt_sm--15">
+                                                <img src="assets/images/portfolio/30.webp" alt="Trabablas Interchange">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/31.webp" alt="Trabablas Interchange">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt--30">
+                                    <div class="row mb--40">
+                                        <div class="col-lg-12">
+                                            <div class="single-project-info-wrapper-inner">
+                                                <h4 class="title">Trabablas Interchange: Revolutionizing Harare’s Traffic Infrastructure</h4>
+                                                <p class="disc">
+                                                    The Trabablas Interchange is Zimbabwe’s largest road infrastructure development project to date. Strategically situated in Harare, this multi-level interchange is designed to eliminate congestion at one of the busiest and most critical junctions in the country. The project is a flagship of national infrastructural transformation and a key enabler of economic growth through efficient logistics.
+                                                </p>
+                                                <div class="row g-4">
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Client:</span>
+                                                            <p>Government of Zimbabwe</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Location:</span>
+                                                            <p>Harare, Zimbabwe</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Project Year:</span>
+                                                            <p>2021</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Status:</span>
+                                                            <p>Completed</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Duration:</span>
+                                                            <p>4 Years</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Value:</span>
+                                                            <p>USD $88 Million</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="project-details-content-bottom">
+                                                <p class="disc">
+                                                    The Trabablas Interchange replaces a chaotic and hazardous roundabout system with a modern, grade-separated cloverleaf design. It features multiple flyovers, underpasses, and slip roads that allow uninterrupted traffic flow across major arterial roads including Simon Mazorodze, Chitungwiza Road, and High Glen Road. Since completion, it has significantly reduced travel time, improved road safety, and enhanced logistical efficiency for domestic and regional traffic.
+                                                </p>
+                                                <p class="bold">
+                                                    “This transformative project is a major milestone in Zimbabwe’s commitment to modernising infrastructure and building for the future.”
+                                                </p>
+                                                <p class="disc">
+                                                    Fossil Contracting executed the project under the Emergency Road Rehabilitation Programme (ERRP2) and brought world-class engineering, project management, and construction capabilities to this endeavor. Leveraging a comprehensive plant fleet and experienced personnel, Fossil Contracting delivered works including excavation, concrete bridge construction, road surfacing, retaining walls, and stormwater drainage infrastructure.
+                                                </p>
+                                                <p class="disc">
+                                                    Upon completion, the Trabablas Interchange became a model of excellence in Southern African road engineering and a symbol of national pride, facilitating smoother transit and catalyzing economic activity across sectors.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="tab-pane fade" id="hre-chi-tab-pane" role="tabpanel" aria-labelledby="hre-chi-tab"
+                            tabindex="0">
+
+                            <div class="project-details-wrapper-image-top">
+                                <div class="container">
+                                    <div class="row g-0">
+                                        <div class="col-lg-8">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/32.webp" alt="Harare-Chirundu Road">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pl--20 pl_md--0 pl_sm--0">
+                                            <div class="thumbnail mb--10 mt_md--10 mt_sm--15">
+                                                <img src="assets/images/portfolio/33.webp" alt="Harare-Chirundu Road">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/34.webp" alt="Harare-Chirundu Road">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt--30">
+                                    <div class="row mb--40">
+                                        <div class="col-lg-12">
+                                            <div class="single-project-info-wrapper-inner">
+                                                <h4 class="title">Harare–Chirundu Road Upgrading & Widening Project</h4>
+                                                <p class="disc">
+                                                    As part of the North–South Corridor, the Harare–Chirundu Road is a vital regional link connecting Zimbabwe to Zambia and further north to the Democratic Republic of Congo. This upgrading and widening project is key to enhancing trade efficiency, regional integration, and national transport capacity under SADC infrastructure development goals.
+                                                </p>
+                                                <div class="row g-4">
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Client:</span>
+                                                            <p>Government of Zimbabwe</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Location:</span>
+                                                            <p>Harare to Chirundu</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Project Year:</span>
+                                                            <p>2022</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Status:</span>
+                                                            <p>Ongoing</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Duration:</span>
+                                                            <p>5 Years</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Value:</span>
+                                                            <p>USD $360 Million</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="project-details-content-bottom">
+                                                <p class="disc">
+                                                    The project entails dualisation, road widening, rehabilitation of damaged sections, and the upgrading of bridges and culverts to improve road safety and traffic capacity. Fossil Contracting is responsible for full construction services along designated segments, including asphalt surfacing, concrete drainage systems, and road markings. The project also supports regional trade and logistics by creating a smoother, safer, and more durable roadway for heavy trucks and passenger vehicles.
+                                                </p>
+                                                <p class="bold">
+                                                    “A critical lifeline for Zimbabwe’s economy and a pillar of SADC connectivity.”
+                                                </p>
+                                                <p class="disc">
+                                                    Fossil’s work includes removing aged infrastructure, re-compacting subgrades, and constructing new layers of road base and surfacing. All construction activities are executed under strict safety, quality, and environmental control standards. This section of the corridor will drastically cut travel time and costs while reducing vehicle operating expenses and accidents.
+                                                </p>
+                                                <p class="disc">
+                                                    The Harare–Chirundu upgrade is a shining example of public-private partnership in infrastructure development and showcases Fossil Contracting’s competence in delivering mega-scale, transformative projects that fuel national and regional development.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="tab-pane fade" id="defe-tab-pane" role="tabpanel" aria-labelledby="defe-tab"
+                            tabindex="0">
+
+                            <div class="project-details-wrapper-image-top">
+                                <div class="container">
+                                    <div class="row g-0">
+                                        <div class="col-lg-8">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/35.webp" alt="Defe Dopota Dam">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pl--20 pl_md--0 pl_sm--0">
+                                            <div class="thumbnail mb--10 mt_md--10 mt_sm--15">
+                                                <img src="assets/images/portfolio/36.webp" alt="Defe Dopota Dam">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/37.webp" alt="Defe Dopota Dam">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt--30">
+                                    <div class="row mb--40">
+                                        <div class="col-lg-12">
+                                            <div class="single-project-info-wrapper-inner">
+                                                <h4 class="title">Construction of Defe Dopota Dam</h4>
+                                                <p class="disc">
+                                                    The Defe Dopota Dam project represents a strategic investment in sustainable water infrastructure aimed at improving agricultural productivity, climate resilience, and water security in the Mashonaland West province of Zimbabwe. Fossil Contracting was engaged to deliver comprehensive civil engineering solutions, from earthworks to final dam wall construction.
+                                                </p>
+                                                <div class="row g-4">
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Client:</span>
+                                                            <p>Government of Zimbabwe</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Location:</span>
+                                                            <p>Defe Dopota, Mashonaland West</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Project Year:</span>
+                                                            <p>2021</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Status:</span>
+                                                            <p>Completed</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Duration:</span>
+                                                            <p>18 Months</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Value:</span>
+                                                            <p>USD $13 Million</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="project-details-content-bottom">
+                                                <p class="disc">
+                                                    The scope of work included excavation, bulk earth moving, embankment compaction, spillway construction, concrete outlet works, and auxiliary structures. The dam is designed to serve both irrigation and potable water needs in the region, helping local farmers and surrounding communities thrive in a climate-vulnerable environment.
+                                                </p>
+                                                <p class="bold">
+                                                    “Water security is at the heart of national development, and this project empowers communities to flourish.”
+                                                </p>
+                                                <p class="disc">
+                                                    Fossil Contracting deployed a medium-sized fleet of dozers, excavators, and tippers for efficient dam shaping and earth compaction. The team delivered high-standard civil works, including structural concrete, dam liners, drainage control, and the installation of control valves and pipes.
+                                                </p>
+                                                <p class="disc">
+                                                    This successful delivery demonstrates Fossil’s growing specialization in dam construction and underscores its commitment to agricultural infrastructure development, climate adaptation, and sustainable engineering practices across Zimbabwe.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="gdi-tab-pane" role="tabpanel" aria-labelledby="gdi-tab"
+                            tabindex="0">
+
+                            <div class="project-details-wrapper-image-top">
+                                <div class="container">
+                                    <div class="row g-0">
+                                        <div class="col-lg-8">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/38.webp" alt="Great Dyke Investments">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 pl--20 pl_md--0 pl_sm--0">
+                                            <div class="thumbnail mb--10 mt_md--10 mt_sm--15">
+                                                <img src="assets/images/portfolio/39.webp" alt="Great Dyke Investments">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="assets/images/portfolio/40.webp" alt="Great Dyke Investments">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt--30">
+                                    <div class="row mb--40">
+                                        <div class="col-lg-12">
+                                            <div class="single-project-info-wrapper-inner">
+                                                <h4 class="title">Great Dyke Investments (GDI) Civil Works Project</h4>
+                                                <p class="disc">
+                                                    Fossil Contracting was awarded a major contract for site civil works at the Great Dyke Investments platinum project in Darwendale, Zimbabwe. This initiative is one of the largest platinum mining investments in the country and aims to establish a world-class integrated platinum group metals (PGM) mining and processing operation.
+                                                </p>
+                                                <div class="row g-4">
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Client:</span>
+                                                            <p>Great Dyke Investments</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Location:</span>
+                                                            <p>Darwendale, Zimbabwe</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Project Year:</span>
+                                                            <p>2020</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Status:</span>
+                                                            <p>Completed (Phase 1)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Duration:</span>
+                                                            <p>24 Months</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="single-project-info">
+                                                            <span>Value:</span>
+                                                            <p>USD $25 Million</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="project-details-content-bottom">
+                                                <p class="disc">
+                                                    The scope of work included extensive bulk earthworks, road construction, stormwater drainage, and concrete works for key plant infrastructure. As part of enabling works for the processing plant and support facilities, Fossil delivered access roads, foundations, platforms, culverts, and stormwater protection structures.
+                                                </p>
+                                                <p class="bold">
+                                                    “This project reinforces Zimbabwe’s platinum sector growth and demonstrates Fossil’s capability in mining infrastructure.”
+                                                </p>
+                                                <p class="disc">
+                                                    The work required precision in geo-technical stabilisation, compaction of engineered fill, and preparation of critical areas for mechanical and structural installations. Safety and environmental compliance were observed at all stages in accordance with international mining and construction standards.
+                                                </p>
+                                                <p class="disc">
+                                                    With the successful delivery of this contract, Fossil Contracting cemented its reputation as a reliable partner in large-scale mining infrastructure, helping pave the way for one of Zimbabwe’s most ambitious mineral sector investments.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts projects areaend -->
+
+
+    <!-- rts footer area start -->
+<div class="rts-footer-area rts-section-gapTop bg_footer-1 bg_image">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact-area-footer-top">
+                    <div class="single-contact-area-box">
+                        <div class="icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h6 class="title">Call Us Now</h6>
+                        <a href="#">(646) 555-0258</a>
+                        <a href="#">(213) 555-0456, (503) 555-0666</a>
+                    </div>
+                    <div class="single-contact-area-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h6 class="title">Office Time</h6>
+                        <a href="#">Mon-Fri: 9:00 am to 5:00 pm <br>
+                            Sat: 9:00 am to 2:00 pm</a>
+                    </div>
+                    <div class="single-contact-area-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h6 class="title">Need Support</h6>
+                        <a href="#">support@elever.com</a>
+                        <a href="#">help-elver@gmail.com</a>
+                    </div>
+                    <div class="single-contact-area-box">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        </div>
+                        <h6 class="title">Our Address</h6>
+                        <a href="#">456 Elm Avenue, Floor 2, San <br>
+                            Francisco, CA 94103</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-full">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="nav-footer-wrapper-one">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="footer-float-nav">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="project.html">Projects</a></li>
+                                    <li><a href="blog-grid.html">Updates</a></li>
+                                    <li><a href="vision.html">Mission</a></li>
+                                    <li><a href="company-history.html">Inside</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="company-story.html">History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="footer-wrapper-left-one">
+                    <a href="#" class="logo">
+                        <img src="assets/images/logo/01.svg" alt="logo">
+                    </a>
+                    <p class="disc">
+                        we’re committed to elevating the construction experience for our clients. With a passion for
+                        innovation and quality craftsmanship,
+                    </p>
+                    <div class="social-area-wrapper-one">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="footer-wrapper-right">
+                    <div class="single-nav-area-footer use-link">
+                        <h4 class="title">Useful Links</h4>
+                        <ul>
+                            <li><a href="about.html"><i class="fa-regular fa-arrow-right-long"></i>About Us</a></li>
+                            <li><a href="about.html"><i class="fa-regular fa-arrow-right-long"></i>Our Gallery</a></li>
+                            <li><a href="service.html"><i class="fa-regular fa-arrow-right-long"></i>Our Services</a>
+                            </li>
+                            <li><a href="team.html"><i class="fa-regular fa-arrow-right-long"></i>Our Team</a></li>
+                            <li><a href="contact.html"><i class="fa-regular fa-arrow-right-long"></i>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-nav-area-footer use-link">
+                        <h4 class="title">Quick Services</h4>
+                        <ul>
+                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>General
+                                    Contracting</a>
+                            </li>
+                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Project
+                                    Management</a>
+                            </li>
+                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>New
+                                    Construction</a></li>
+                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Renovations
+                                    &
+                                    Remodeling</a></li>
+                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Interior
+                                    Finishing</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-nav-area-footer news-letter">
+                        <h4 class="title">Newsletter</h4>
+                        <p>Aplications prodize before front end ortals visualize front end</p>
+                        <form action="#">
+                            <input type="email" placeholder="Email Address" required>
+                            <button class="btn-subscribe mt--15">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-full copyright-area-one">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright-wrapper">
+                                <p class="mb-0">Copyright &copy;
+                                    <script>
+                                        document.write(
+                                            new Date().getFullYear()
+                                        )
+                                    </script>
+                                    Elever. All Rights Reserved.
+                                </p>
+                                <div class="right-nav">
+                                    <ul>
+                                        <li><a href="terms-of-condition.html">Terms of use </a></li>
+                                        <li><a href="privacy-policy.html"> Privacy</a></li>
+                                        <li><a href="privacy-policy.html">Environmental Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- rts footer area end -->
+
+    <!-- progress area start -->
+<!-- <div id="elevate-load">
+    <div class="loader-wrapper">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div> -->
+<!-- progress area end -->
+
+<!-- rtl btn area start -->
+<div class="rtl-ltr-switcher-btn">
+    <span class="rtl show">View RTL</span>
+    <span class="ltr">View LTR</span>
+</div>
+<!-- rtl btn area end -->
+
+<!-- progress area start -->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+        </path>
+    </svg>
+</div>
+<!-- progress area end -->
+
+
+<!-- offcanvase search -->
+<div class="search-input-area">
+    <div class="container">
+        <div class="search-input-inner">
+            <div class="input-div">
+                <input class="search-input autocomplete" type="text" placeholder="Search by keyword or #">
+                <button><i class="far fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
+</div>
+<div id="anywhere-home" class="">
+</div>
+
+<!-- scripts -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabsContainer = document.getElementById('tabsScrollContainer');
+        const nav = document.querySelector('.nav');
+        const navItems = document.querySelectorAll('.nav-item');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        // ADDED: Custom scrollbar elements
+        const scrollbarThumb = document.getElementById('scrollbarThumb');
+        const scrollbarTrack = document.querySelector('.top-scrollbar');
+        
+        // ADDED: Set initial scrollbar position
+        updateScrollbar();
+        
+        // ADDED: Update scrollbar position on scroll
+        tabsContainer.addEventListener('scroll', updateScrollbar);
+        
+        // ADDED: Make scrollbar draggable
+        let isDragging = false;
+        
+        scrollbarThumb.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            scrollbarThumb.style.transition = 'none';
+            document.addEventListener('mousemove', handleDrag);
+            document.addEventListener('mouseup', stopDrag);
+        });
+        
+        function handleDrag(e) {
+            if (!isDragging) return;
+            
+            const trackRect = scrollbarTrack.getBoundingClientRect();
+            let newPosition = e.clientX - trackRect.left - (scrollbarThumb.offsetWidth / 2);
+            
+            // Constrain within track
+            newPosition = Math.max(0, newPosition);
+            newPosition = Math.min(trackRect.width - scrollbarThumb.offsetWidth, newPosition);
+            
+            // Update scrollbar thumb position
+            scrollbarThumb.style.left = newPosition + 'px';
+            
+            // Calculate corresponding scroll position
+            const scrollPercentage = newPosition / (trackRect.width - scrollbarThumb.offsetWidth);
+            const maxScroll = nav.scrollWidth - tabsContainer.clientWidth;
+            tabsContainer.scrollLeft = scrollPercentage * maxScroll;
+        }
+        
+        function stopDrag() {
+            isDragging = false;
+            scrollbarThumb.style.transition = '';
+            document.removeEventListener('mousemove', handleDrag);
+            document.removeEventListener('mouseup', stopDrag);
+        }
+        
+        // ADDED: Click on track to jump to position
+        scrollbarTrack.addEventListener('click', function(e) {
+            if (e.target === scrollbarThumb) return;
+            
+            const trackRect = scrollbarTrack.getBoundingClientRect();
+            const clickPosition = e.clientX - trackRect.left - (scrollbarThumb.offsetWidth / 2);
+            const maxThumbPosition = trackRect.width - scrollbarThumb.offsetWidth;
+            const newPosition = Math.max(0, Math.min(maxThumbPosition, clickPosition));
+            
+            scrollbarThumb.style.left = newPosition + 'px';
+            
+            // Calculate corresponding scroll position
+            const scrollPercentage = newPosition / maxThumbPosition;
+            const maxScroll = nav.scrollWidth - tabsContainer.clientWidth;
+            tabsContainer.scrollLeft = scrollPercentage * maxScroll;
+        });
+        
+        // ADDED: Function to update scrollbar position
+        function updateScrollbar() {
+            // Calculate scrollbar thumb position
+            const scrollPercentage = tabsContainer.scrollLeft / (nav.scrollWidth - tabsContainer.clientWidth);
+            const trackWidth = scrollbarTrack.clientWidth - scrollbarThumb.clientWidth;
+            scrollbarThumb.style.left = (scrollPercentage * trackWidth) + 'px';
+        }
+        
+        // Tab switching functionality
+        navItems.forEach((item) => {
+            const button = item.querySelector('.nav-link');
+            
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.nav-link').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Center the clicked item in the view
+                centerNavItem(item);
+                
+                // Hide all tab panes
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('active');
+                });
+                
+                // Show corresponding tab pane
+                const targetId = this.getAttribute('data-bs-target');
+                const targetPane = document.querySelector(targetId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+        
+        // Function to center the clicked nav item
+        function centerNavItem(item) {
+            // Calculate positions
+            const containerWidth = tabsContainer.clientWidth;
+            const itemRect = item.getBoundingClientRect();
+            const containerRect = tabsContainer.getBoundingClientRect();
+            
+            // Calculate scroll position to center the item
+            const scrollPosition = tabsContainer.scrollLeft + 
+                                 (itemRect.left - containerRect.left) - 
+                                 (containerWidth / 2) + 
+                                 (itemRect.width / 2);
+            
+            // Smooth scroll to center the item
+            tabsContainer.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Initialize first item as centered on page load
+        window.addEventListener('load', function() {
+            const firstItem = document.querySelector('.nav-item');
+            if (firstItem) {
+                centerNavItem(firstItem);
+            }
+        });
+    });
+</script>
+<script>
+    // PREVENT TEXT SELECTION WHEN DRAGGING ON MENU ITEMS
+    // Add mousedown event listener to prevent default behavior
+    button.addEventListener('mousedown', function(e) {
+        // Prevent default behavior to avoid text selection
+        e.preventDefault();
+    });
+</script>
+<script src="assets/js/plugins/jquery.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+
+<script src="assets/js/plugins/odometer.js"></script>
+<script src="assets/js/plugins/jquery-appear.js"></script>
+
+<script src="assets/js/plugins/metismenu.js"></script>
+<script src="assets/js/plugins/swiper.js"></script>
+<script src="assets/js/plugins/aos.js"></script>
+<script src="assets/js/plugins/nice-select.js"></script>
+<script src="assets/js/plugins/smooth-scroll.js"></script>
+<script src="assets/js/vendor/waw.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuSiPhoDaOJ7aqtJVtQhYhLzwwJ7rQlmA"></script>
+<script src="assets/js/vendor/marker.js"></script>
+<script src="assets/js/vendor/map-content.js"></script>
+<script src="assets/js/vendor/info-box.js"></script>
+<script src="https://html.themewant.com/golfy/assets/js/plugins/magnific-popup.js"></script>
+
+<script src="assets/js/plugins/contact.form.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
