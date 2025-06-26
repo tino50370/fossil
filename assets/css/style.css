@@ -103,6 +103,11 @@
   --h6: 18px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 * {
   box-sizing: border-box;
 }
