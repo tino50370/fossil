@@ -43,8 +43,8 @@
           "support@reactheme.com",
           "1-333-345-6868"
         ),
-        40.709327,
-        -74.004815,
+        -17.847592398738055,
+        31.131906127101736,
         1,
         "<div></div>",
       ],
@@ -189,7 +189,7 @@
     var map = new google.maps.Map(document.getElementById("map-contact"), {
       zoom: zoomLevel,
       scrollwheel: false,
-      center: new google.maps.LatLng(40.709295, -74.003099),
+      center: new google.maps.LatLng(-17.847592398738055, 31.131906127101736),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       zoomControl: true,
       zoomControlOptions: {

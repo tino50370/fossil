@@ -20,13 +20,31 @@
     <link rel="stylesheet" preload href="assets/css/vendor/bootstrap.min.css">
     <!-- custom css here -->
     <link rel="stylesheet" preload href="assets/css/style.css">
+    <style>
+      .error-message {
+        color: #c00;
+        font-size: 0.9em;
+        margin-top: 0.25em;
+        display: none;
+      }
+      .btn-subscribe {
+        background-color: #393d41;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .btn-subscribe.success {
+        background-color: #28a745 !important;
+      }
+    </style>
 </head>
 
 <body>
     <!-- header area start -->
+     
     <header class="header-three header--sticky">
         <div class="logo-area">
-            <a href="#">
+            <a href="index.html">
                 <img src="assets/images/logo/01.svg" alt="">
             </a>
         </div>
@@ -41,7 +59,7 @@
                 </li>
 
                 <li class="main-nav has-dropdown mega-menu">
-                    <a href="#">Services</a>
+                    <a href="services.html">Services</a>
                     <div class="rts-mega-menu service-mega-menu-style">
                         <div class="wrapper">
                             <div class="container">
@@ -49,7 +67,7 @@
                                     <div class="col-lg-4">
                                         <ul class="mega-menu-item parent-nav">
                                             <li>
-                                                <a href="service-single.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
                                                             <img src="assets/images/service/04.svg"
@@ -65,7 +83,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-two.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
                                                             <img src="assets/images/service/05.svg"
@@ -81,7 +99,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-three.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
                                                             <img src="assets/images/service/06.svg"
@@ -97,14 +115,14 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-three.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
-                                                            <img src="assets/images/service/06.svg"
+                                                            <img src="assets/images/service/07.svg"
                                                                 alt="service">
                                                         </div>
                                                         <div class="info">
-                                                            <h5 class="title">Asphalt Works</h5>
+                                                            <h5 class="title">Asphalt Plant</h5>
                                                             <p class="details">
                                                                 Fossil operates stationary and mobile asphalt plants, delivering 300 tons/hour to meet diverse market needs.
                                                             </p>
@@ -117,10 +135,10 @@
                                     <div class="col-lg-4">
                                         <ul class="mega-menu-item parent-nav">
                                             <li>
-                                                <a href="service-single-four.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
-                                                            <img src="assets/images/service/07.svg"
+                                                            <img src="assets/images/service/08.svg"
                                                                 alt="service">
                                                         </div>
                                                         <div class="info">
@@ -133,7 +151,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-five.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
                                                             <img src="assets/images/service/09.svg"
@@ -150,10 +168,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-five.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
-                                                            <img src="assets/images/service/09.svg"
+                                                            <img src="assets/images/service/10.svg"
                                                                 alt="service">
                                                         </div>
                                                         <div class="info">
@@ -167,10 +185,10 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="service-single-five.html">
+                                                <a href="services.html#services">
                                                     <div class="single-service-menu">
                                                         <div class="icon">
-                                                            <img src="assets/images/service/09.svg"
+                                                            <img src="assets/images/service/11.svg"
                                                                 alt="service">
                                                         </div>
                                                         <div class="info">
@@ -197,10 +215,10 @@
                 </li>
 
                 <li class="main-nav">
-                    <a href="#">Projects</a>
+                    <a href="projects.html">Projects</a>
                 </li>
                 <li class="main-nav">
-                    <a href="#">Our Team</a>
+                    <a href="index.html#team">Our Team</a>
                 </li>
                 <li class="main-nav"><a href="contact.html">Contact</a></li>
             </ul>
@@ -216,23 +234,6 @@
 
     <div id="side-bar" class="side-bar header-two">
         <button class="close-icon-menu"><i class="far fa-times"></i></button>
-        <!-- inner menu area desktop start -->
-        <div class="inner-main-wrapper-desk">
-            <div class="thumbnail">
-                <img src="assets/images/banner/04.jpg" alt="elevate">
-            </div>
-            <div class="inner-content">
-                <h4 class="title"></h4>
-                <p class="disc">
-                    
-                </p>
-                <div class="footer">
-                    <h4 class="title">Got a project in mind?</h4>
-                    <a href="contact.html" class="rts-btn btn-primary">Let's talk</a>
-                </div>
-            </div>
-        </div>
-
         <!-- mobile menu area start -->
         <div class="mobile-menu d-block d-xl-none">
             <nav class="nav-main mainmenu-nav mt--30">
@@ -244,56 +245,32 @@
                         <a href="about.html" class="main">About Us</a>
                     </li>
                     <li class="has-droupdown">
-                        <a href="#" class="main">Services</a>
+                        <a class="main">Services</a>
                         <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="service.html">Road Construction</a></li>
-                            <li><a class="mobile-menu-link" href="service-single.html">Contract Mining</a></li>
-                            <li><a class="mobile-menu-link" href="service-single-two.html">Civil & Structural Works</a></li>
-                            <li><a class="mobile-menu-link" href="service-single-three.html">Earth Works</a></li>
-                            <li><a class="mobile-menu-link" href="service-single-four.html">Land Development</a></li>
-                            <li><a class="mobile-menu-link" href="service-single-five.html">Building Works</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Infrastructure Development</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Land Development</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Concrete Works</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Asphalt Plant</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Road Construction</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Earth Works</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Building Works</a></li>
+                            <li><a class="mobile-menu-link" href="services.html#services">Plant Hire</a></li>
                         </ul>
                     </li>
                     <li >
-                        <a href="#" class="main">Projects</a>
+                        <a href="projects.html" class="main">Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="main">Our Team</a>
+                        <a href="index.html#team" class="main">Our Team</a>
                     </li>
                     <li>
                         <a href="contact.html" class="main">Contact Us</a>
                     </li>
                 </ul>
             </nav>
-
-            <div class="social-wrapper-one">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- mobile menu area end -->
     </div>
-    <!-- header area end -->
 
     <!-- rts banner area strart -->
     <div class="rts-banner-area rts-section-gap rts-breadcrumb-area pd-bread  position-relative">
