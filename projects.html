@@ -151,6 +151,93 @@
             transform: translateX(100%);
         }
     </style>
+    <style>
+    table.fossil-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+    table.fossil-table th {
+        background-color: #285d1a;
+        color: #ffffff;
+        padding: 12px;
+        text-align: left;
+    }
+    table.fossil-table td {
+        padding: 12px;
+        border-bottom: 1px solid #e0e0e0;
+        vertical-align: top;
+    }
+    table.fossil-table tr:nth-child(even) td {
+        background-color: #f2f9f2;
+    }
+    table.fossil-table tr:nth-child(odd) td {
+        background-color: #ffffff;
+    }
+    </style>
+    <style>
+    /* 1. Responsive wrapper */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    /* 2. Base table styling (as before) */
+    table.fossil-table {
+        width: 100%;
+        min-width: 800px;               /* ensure full layout on desktop */
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+    table.fossil-table th {
+        background-color: #285d1a;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+    }
+    table.fossil-table td {
+        padding: 12px;
+        border-bottom: 1px solid #e0e0e0;
+        vertical-align: top;
+    }
+    table.fossil-table tr:nth-child(even) td {
+        background-color: #f2f9f2;
+    }
+    table.fossil-table tr:nth-child(odd) td {
+        background-color: #fff;
+    }
+
+    /* 3. Mobile “stacked” view */
+    @media (max-width: 768px) {
+        table.fossil-table {
+        border: 0;
+        min-width: 0;
+        }
+        table.fossil-table thead {
+        display: none;           /* hide header row */
+        }
+        table.fossil-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        }
+        table.fossil-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        }
+        table.fossil-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 12px;
+        font-weight: bold;
+        text-align: left;
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -387,7 +474,7 @@
     </div>
 
     <!-- rts banner area strart -->
-    <div class="rts-banner-area rts-section-gap rts-breadcrumb-area pd-bread  position-relative">
+    <div class="rts-banner-area rts-section-gap rts-breadcrumb-area blog-grid  position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -398,8 +485,8 @@
                             Crafting Quality
                         </h1>
                         <div class="nav-area-navigation">
-                            <a href="#">home</a>
-                            <a class="current" href="#">Project Details</a>
+                            <a href="index.html">home</a>
+                            <a class="current" href="#">Projects</a>
                         </div>
                     </div>
                 </div>
@@ -448,9 +535,9 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="fre-tab2" data-bs-toggle="tab"
                                     data-bs-target="#fre-tab-pane" type="button" role="tab"
-                                    aria-controls="fre-tab-pane" aria-selected="false">FREDA REBEECA PROJECT</button>
+                                    aria-controls="fre-tab-pane" aria-selected="false">MAJOR PROJECTS OVERVIEW</button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
                                     data-bs-target="#contact-tab-pane" type="button" role="tab"
                                     aria-controls="contact-tab-pane" aria-selected="false">ZIMPLATS 56-59KM ROAD REHABILITATION NGEZI</button>
@@ -509,7 +596,7 @@
                                 <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
                                     data-bs-target="#profile-tab-pane" type="button" role="tab"
                                     aria-controls="profile-tab-pane" aria-selected="false">PUMA AVIATION DEPOTS</button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="tab-content" id="myTabContent">
@@ -602,6 +689,36 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- large vbdeo area start -->
+                                <div class="large-video-area rts-section-gap">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="title-style-two-center inner">
+                                                    <span class="pre">Watch Video</span>
+                                                    <h2 class="title">Celebrating progress at the official<br>opening of The Trabablas Interchange</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pt--60">
+                                            <div class="col-lg-12">
+                                                <div class="large-video-area-inner bg_image">
+                                                    <div class="vedio-icone">
+                                                        <a class="video-play-button play-video" href="">
+                                                            <span></span>
+                                                        </a>
+                                                        <div class="video-overlay">
+                                                            <a class="video-overlay-close">×</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- large vbdeo area end -->
+
                             </div>
                             
                         </div>
@@ -997,75 +1114,427 @@
                                 </div>
                                 <div class="container mt--30">
                                     <div class="row mb--40">
-                                        <div class="col-lg-12">
-                                            <div class="single-project-info-wrapper-inner">
-                                                <h4 class="title">Harare–Beitbridge Highway Rehabilitation Project</h4>
-                                                <p class="disc">
-                                                    The Harare–Beitbridge Highway is Zimbabwe’s busiest and most strategic trade route, linking the country to South Africa and the wider SADC region. Under the Emergency Road Rehabilitation Programme (ERRP), Fossil Contracting was tasked with rehabilitating key sections of this critical highway to modern, durable standards.
-                                                </p>
-                                                <div class="row g-4">
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Client:</span>
-                                                            <p>Government of Zimbabwe</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Location:</span>
-                                                            <p>Harare to Beitbridge</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Project Year:</span>
-                                                            <p>2021</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Status:</span>
-                                                            <p>Completed</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Duration:</span>
-                                                            <p>24 Months</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="single-project-info">
-                                                            <span>Value:</span>
-                                                            <p>USD $90 Million</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="col-lg-12">
+                                        <div class="single-project-info-wrapper-inner">
+                                        <h4 class="title">Fossil Contracting Major Projects Overview</h4>
+                                        <p class="disc">
+                                            Over the last decade, Fossil Contracting has delivered <strong>44</strong> large-scale infrastructure projects across Zimbabwe and the wider SADC region—including road rehabilitation, dualisation, housing developments, dam construction and pipeline works. Our portfolio exceeds <strong>USD $627.8 million</strong> in contract value, with an average participation rate of <strong>98%</strong> and a completion rate above <strong>82%</strong>.
+                                        </p>
+                                        <div class="row g-4">
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Total Projects:</span>
+                                                <p>44</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Portfolio Value:</span>
+                                                <p>USD $627.8 M</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Avg Participation:</span>
+                                                <p>98%</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Completed Projects:</span>
+                                                <p>36 (82%)</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Ongoing Projects:</span>
+                                                <p>8 (18%)</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="single-project-info">
+                                                <span>Key Sectors:</span>
+                                                <p>Roads • Housing • Dams • Pipelines</p>
+                                            </div>
                                             </div>
                                         </div>
+                                        </div>
+                                    </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="project-details-content-bottom">
-                                                <p class="disc">
-                                                    The scope of works included full-depth road reconstruction, resurfacing, widening, and drainage upgrades across numerous kilometres. Fossil Contracting employed modern construction equipment, high-quality bitumen, and asphalt mixes to ensure the road met regional trunk road standards.
-                                                </p>
-                                                <p class="bold">
-                                                    “A flagship infrastructure project that strengthens regional logistics and stimulates national economic growth.”
-                                                </p>
-                                                <p class="disc">
-                                                    The Harare–Beitbridge upgrade improves travel efficiency, enhances freight handling, and reduces wear and tear on vehicles. The rehabilitation also involved installation of road signage, culverts, and traffic safety systems. The project created hundreds of local jobs and transferred key civil engineering skills.
-                                                </p>
-                                                <p class="disc">
-                                                    The project is a testament to Fossil Contracting’s capacity to execute national priority works with speed, quality, and professionalism, making a lasting impact on the country’s transport infrastructure.
-                                                </p>
+                                            <div class="table-responsive">
+                                                <table class="fossil-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name, location and description of projects</th>
+                                                            <th>Name &amp; Address of Employer and Engineer responsible for supervision</th>
+                                                            <th>Name of Consultant or Engineer in Charge of Supervision</th>
+                                                            <th>Percentage of Participation of Fossil in project</th>
+                                                            <th>Value of Contract (USD)</th>
+                                                            <th>Percentage of Completion</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Bindura Municipality Emergency Road Rehabilitation – Phase 1</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Bindura Municipality, 565 Thurow Avenue, Bindura</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Bindura Municipality Engineers<br>Contact: 0775 158 819 (Eng Devera)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$1.15 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Mabvuku – Turn off and Chizhanje Road Widening Project</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Stand 2098, Sunway City, Ventersburg Estate, Mutare Road</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">CGM Consultants – Eng Amos – 0773 532 294</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$375 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Regravelling of Mtoko Rwenya 37 km road for MashCentral MOT</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development – Department of Roads Mash Central</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mutoko Town Council Engineers<br>Contact: 0773 046 764 (Eng Maganga)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$196 K</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Reclaiming, Resealing and Milling of Roads for Harare City Council</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Cleverland House, 92 Leopold Takawira Street, P.O. Box 1583, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">City of Harare Engineers<br>Contact: 0772 231 750 (Eng Munyonga)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$2.15 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare – Chirundu Road Rehabilitation works for Mash West MOT</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development – Dept. of Roads Mash West MOT</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0712 883 001 (Eng Mapurisa)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$2.4 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Servicing of 649 Residential Stands for Redcliff Residential Stands</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Civic Center, Redcliff Town Council</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Redcliff Town Council Engineers<br>Contact: 0782 442 039 (Eng Thembani)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$1.9 Mil</td>
+                                                            <td data-label="Percentage of Completion">30%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Construction of a spillway Road at the Dellport / Harare–Mutare Highway For PPC</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Stand 2111, Sunway City, Ventersburg Estate, Mutare Road</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$200 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Resurfacing of 1.2 km Two Brigade Army Base Roads</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">ZINARA, Glen Roy, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">ZINARA Engineers</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$110 K</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Kuwadzana Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Group Five, Intertoll</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Group Five Engineers<br>Contact: 0782 729 459</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$50 K</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Construction of Tollgates and Surfacing of 6 km Sherwood Road</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">ZINARA, Glen Roy, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">ZINARA Engineers<br>Contact: 0773 682 896</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$1.29 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Guruve Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">P.O. Box AP 110, Guruve</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Guruve RDC Engineers<br>Contact: +263 777 631 370</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$280 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Chishawasha Memorial Park Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Nyaradzo, Willowvale Road, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">KST Project Managers<br>Contact: 0773 003 182 (Eng Kambarami)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$9.2 Mil</td>
+                                                            <td data-label="Percentage of Completion">60%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Redcliff Old Steelworks Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Civic Center, Redcliff Town Council</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Redcliff Town Council Engineers<br>Contact: 0782 442 039 (Eng Thembani)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$930 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Supply, fabrication, construction, installation, erection, testing &amp; commissioning of a 2000 MT LPG Depot in Ruwa</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">National Oil Infrastructure Company of Zimbabwe</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Maxi-Tech Engineering<br>Contact: +263 777 239 450 (Eng Gwaendepi)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$7.8 Mil</td>
+                                                            <td data-label="Percentage of Completion">50%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Infrastructure Development of Servicing Medium &amp; High Density Stands in Green Hills Bloemfontein</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Fossil Contracting</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">UIP Africa Consulting Engineers<br>Contact: +263 242 703 259 (Simba Kaseke)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$6 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>City of Harare Emergency Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Cleverland House, 92 Leopold Takawira Street, P.O. Box 1583, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">City of Harare Engineers<br>Contact: 0772 231 750 (Eng Munyonga)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$10 Mil</td>
+                                                            <td data-label="Percentage of Completion">70%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Bindura Municipality Emergency Road Rehabilitation – Phase 2</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Bindura Municipality, 565 Thurow Avenue, Bindura</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Bindura Municipality Engineers<br>Contact: 0775 158 819 (Eng Devera)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$560 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Chiredzi Lion Drive Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Masvingo</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">MOT Masvingo<br>Contact: Eng Jeme (0772 942 405)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$1.87 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Mutare Road Dualisation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland East, Eastlea, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mashonaland East Engineers<br>Contact: 0772 979 107 (Eng Siamenda)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$4.13 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>City of Gweru Roads Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">City Council of Gweru, Town House, Gweru</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">City of Gweru<br>Contact: 0779 488 063 (Eng Masukume)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$0.95 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Esgodini Toll Plaza</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland East, Eastlea, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">MOT<br>Contact: 0783 499 271</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$0.99 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Mutare Town Road Resealing</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Civic Center No. 1 Queensway, P.O. Box 910, Mutare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mutare Town Council Engineer<br>Contact: 020 64469</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$2 Mil</td>
+                                                            <td data-label="Percentage of Completion">0%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Wedza–Sadza Road Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland East, Eastlea, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mashonaland East Engineers<br>Contact: 0772 979 107 (Eng Siamenda)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">80%</td>
+                                                            <td data-label="Value of Contract (USD)">$5.2 Mil</td>
+                                                            <td data-label="Percentage of Completion">80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Rehabilitation of Ngezi–Selous Road 0–13 km</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Borrowdale Office Park, Borrowdale, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$6.5 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Chitungwiza Municipality</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">6004 Tilco Road, Zengeza 2, Chitungwiza</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Chitungwiza Municipality Engineers<br>Contact: 0773 858 974 (Eng Majoni)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$350 k</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>SMC Junction (JV with Masimba Construction)</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ngezi Mine</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">50%</td>
+                                                            <td data-label="Value of Contract (USD)">$16.08 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Zimplats Ponds Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ngezi Mine</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$0.35 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Lunah Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$2.59 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>BANC ABC Housing Development</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">BANC ABC</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$4.2 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>CBZ Barrington Housing Development</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">CBZ Bank</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">CBZ Bank</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$0.59 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Hogerty Hill House Development</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">CBZ Bank</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">CBZ Bank</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$0.44 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Alaska Copper Queen Road Regravelling</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland West, Chinhoyi</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0712 883 001 (Eng Mapurisa)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$1.5 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Zimplats Portal Four Road Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ngezi Mine</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">BICHOD Consulting Engineers<br>Contact: 0772 556 347 (Eng Grace Bema)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$3.04 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Nhekairo Chigondo Roads Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland East, Eastlea, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mashonaland East Engineers<br>Contact: 0772 979 107 (Eng Siamenda)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$6.09 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Murehwa–Madacheche Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Mashonaland East, Eastlea, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Mashonaland East Engineers<br>Contact: 0772 979 107 (Eng Siamenda)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$6.4 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Masvingo Town Council Road Rehabilitation</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Masvingo</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">MOT Masvingo<br>Contact: Eng Jeme (0772 942 405)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$4.29 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Defe Dam Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">ZINWA Block 4 East, Celestial Park Borrowdale</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">ZINWA Block 4 East, Celestial Park Borrowdale<br>Contact: Eng Musoni (0712 905 019)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$89 Mil</td>
+                                                            <td data-label="Percentage of Completion">5%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Masvingo–Beitbridge Road Widening &amp; Rehabilitation Phase 4</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$129 Mil</td>
+                                                            <td data-label="Percentage of Completion">60%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Masvingo–Beitbridge Road Widening &amp; Rehabilitation Phase 3B</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$30 Mil</td>
+                                                            <td data-label="Percentage of Completion">99%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Masvingo–Beitbridge Road Widening &amp; Rehabilitation Phase 3A</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$30 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Masvingo–Beitbridge Road Widening &amp; Rehabilitation Phase 2</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$30 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Harare–Masvingo–Beitbridge Road Widening &amp; Rehabilitation Phase 1</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">Ministry of Transport &amp; Infrastructural Development, Harare</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">Ministry of Transport Engineers<br>Contact: 0777 772 266 (Eng Kangara)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$30 Mil</td>
+                                                            <td data-label="Percentage of Completion">100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Ziminya Dam Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">ZINWA Block 4 East, Celestial Park Borrowdale</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">ZINWA Block 4 East, Celestial Park Borrowdale<br>Contact: Eng Musoni (0712 905 019)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$132 Mil</td>
+                                                            <td data-label="Percentage of Completion">15%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Name, location and description of projects"><strong>Gwayi Shangani Pipeline Construction</strong></td>
+                                                            <td data-label="Name & Address of Employer and Engineer responsible for supervision">ZINWA Block 4 East, Celestial Park Borrowdale</td>
+                                                            <td data-label="Name of Consultant or Engineer in Charge of Supervision">ZINWA Block 4 East, Celestial Park Borrowdale<br>Contact: Eng Musoni (0712 905 019)</td>
+                                                            <td data-label="Percentage of Participation of Fossil in project">100%</td>
+                                                            <td data-label="Value of Contract (USD)">$15.7 Mil</td>
+                                                            <td data-label="Percentage of Completion">10%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -1076,156 +1545,93 @@
 
 
     <!-- rts footer area start -->
-<div class="rts-footer-area rts-section-gapTop bg_footer-1 bg_image">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="contact-area-footer-top">
-                    <div class="single-contact-area-box">
-                        <div class="icon">
-                            <i class="fas fa-phone-alt"></i>
+    <div class="rts-footer-area three bg_footer-1 bg_image">
+        <div class="container rts-section-gapTop">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-wrapper-left-one">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo/fossilLogo.png" alt="logo">
+                        </a>
+                        <p class="disc">
+                            we’re committed to elevating the construction experience for our clients. With a passion for
+                            innovation and quality craftsmanship,
+                        </p>
+                        <div class="social-area-wrapper-one">
+                            <ul>
+                                <li><a href="https://www.facebook.com/fossilzim"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/fossil_contracting_zw"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@fossil_contracting"><i class="fa-brands fa-tiktok"></i></a></li>
+                                
+                            </ul>
                         </div>
-                        <h6 class="title">Call Us Now</h6>
-                        <a href="#">(646) 555-0258</a>
-                        <a href="#">(213) 555-0456, (503) 555-0666</a>
                     </div>
-                    <div class="single-contact-area-box">
-                        <div class="icon">
-                            <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="col-lg-8">
+                    <div class="footer-wrapper-right">
+                        <div class="single-nav-area-footer use-link">
+                            <h4 class="title">Useful Links</h4>
+                            <ul>
+                                <li><a href="about.html"><i class="fa-regular fa-arrow-right-long"></i>About Us</a></li>
+                                
+                                <li><a href="services.html"><i class="fa-regular fa-arrow-right-long"></i>Our
+                                        Services</a></li>
+                                
+                                <li><a href="contact.html"><i class="fa-regular fa-arrow-right-long"></i>Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
-                        <h6 class="title">Office Time</h6>
-                        <a href="#">Mon-Fri: 9:00 am to 5:00 pm <br>
-                            Sat: 9:00 am to 2:00 pm</a>
-                    </div>
-                    <div class="single-contact-area-box">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
+                        <div class="single-nav-area-footer use-link">
+                            <div class="single-nav-area-footer news-letter" style="padding-right: 45%;">
+                                <h4 class="title">Company Profile</h4>
+                                <p>Download our full company profile below</p><br>
+                                <!-- Wrap the button in an anchor with the `download` attribute -->
+                                <a href="assets/docs/Fossil_contracting_Company_Profile_2025.pdf" download="Fossil_contracting_Company_Profile_2025.pdf" target="_blank">
+                                <button class="btn-download mt--15">Download</button>
+                                </a>
+                            </div>
                         </div>
-                        <h6 class="title">Need Support</h6>
-                        <a href="#">support@elever.com</a>
-                        <a href="#">help-elver@gmail.com</a>
-                    </div>
-                    <div class="single-contact-area-box">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <div class="single-nav-area-footer news-letter">
+                            <h4 class="title">Newsletter</h4>
+                            <p>Subscribe for our Newsletter below</p>
+                            <form id="subscribe-form" novalidate>
+                                <input type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        required>
+                                
+                                <div id="email-error" class="error-message">
+                                    Please enter a valid email address.
+                                </div>
+
+                                <button class="btn-subscribe mt--15" type="submit" id="subscribe-btn">Subscribe Now</button>
+                            </form>
                         </div>
-                        <h6 class="title">Our Address</h6>
-                        <a href="#">456 Elm Avenue, Floor 2, San <br>
-                            Francisco, CA 94103</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-full">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="nav-footer-wrapper-one">
+        <div class="container-full copyright-area-one">
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <ul class="footer-float-nav">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="project.html">Projects</a></li>
-                                    <li><a href="blog-grid.html">Updates</a></li>
-                                    <li><a href="vision.html">Mission</a></li>
-                                    <li><a href="company-history.html">Inside</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="company-story.html">History</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="footer-wrapper-left-one">
-                    <a href="#" class="logo">
-                        <img src="assets/images/logo/01.svg" alt="logo">
-                    </a>
-                    <p class="disc">
-                        we’re committed to elevating the construction experience for our clients. With a passion for
-                        innovation and quality craftsmanship,
-                    </p>
-                    <div class="social-area-wrapper-one">
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="footer-wrapper-right">
-                    <div class="single-nav-area-footer use-link">
-                        <h4 class="title">Useful Links</h4>
-                        <ul>
-                            <li><a href="about.html"><i class="fa-regular fa-arrow-right-long"></i>About Us</a></li>
-                            <li><a href="about.html"><i class="fa-regular fa-arrow-right-long"></i>Our Gallery</a></li>
-                            <li><a href="service.html"><i class="fa-regular fa-arrow-right-long"></i>Our Services</a>
-                            </li>
-                            <li><a href="team.html"><i class="fa-regular fa-arrow-right-long"></i>Our Team</a></li>
-                            <li><a href="contact.html"><i class="fa-regular fa-arrow-right-long"></i>Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="single-nav-area-footer use-link">
-                        <h4 class="title">Quick Services</h4>
-                        <ul>
-                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>General
-                                    Contracting</a>
-                            </li>
-                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Project
-                                    Management</a>
-                            </li>
-                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>New
-                                    Construction</a></li>
-                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Renovations
-                                    &
-                                    Remodeling</a></li>
-                            <li><a href="service-single.html"><i class="fa-regular fa-arrow-right-long"></i>Interior
-                                    Finishing</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="single-nav-area-footer news-letter">
-                        <h4 class="title">Newsletter</h4>
-                        <p>Aplications prodize before front end ortals visualize front end</p>
-                        <form action="#">
-                            <input type="email" placeholder="Email Address" required>
-                            <button class="btn-subscribe mt--15">Subscribe Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-full copyright-area-one">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="copyright-wrapper">
-                                <p class="mb-0">Copyright &copy;
-                                    <script>
-                                        document.write(
-                                            new Date().getFullYear()
-                                        )
-                                    </script>
-                                    Elever. All Rights Reserved.
-                                </p>
-                                <div class="right-nav">
-                                    <ul>
-                                        <li><a href="terms-of-condition.html">Terms of use </a></li>
-                                        <li><a href="privacy-policy.html"> Privacy</a></li>
-                                        <li><a href="privacy-policy.html">Environmental Policy</a></li>
-                                    </ul>
+                                <div class="copyright-wrapper">
+                                    <p class="mb-0">Copyright &copy;
+                                        <script>
+                                            document.write(
+                                                new Date().getFullYear()
+                                            )
+                                        </script>
+                                        Fossil Contructing. All Rights Reserved. Website designed by <a href="mailto:tinoda.matewe@students.uz.ac.zw" target="_blank">tinoda.matewe@students.uz.ac.zw</a>
+                                    </p>
+                                    <div class="right-nav">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1234,8 +1640,7 @@
             </div>
         </div>
     </div>
-</div>
-<!-- rts footer area end -->
+    <!-- rts footer area end -->
 
     <!-- progress area start -->
 <!-- <div id="elevate-load">
@@ -1250,12 +1655,7 @@
 </div> -->
 <!-- progress area end -->
 
-<!-- rtl btn area start -->
-<div class="rtl-ltr-switcher-btn">
-    <span class="rtl show">View RTL</span>
-    <span class="ltr">View LTR</span>
-</div>
-<!-- rtl btn area end -->
+
 
 <!-- progress area start -->
 <div class="progress-wrap">

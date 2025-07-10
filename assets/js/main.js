@@ -297,7 +297,7 @@
       $('#play-video, .play-video').on('click', function (e) {
         e.preventDefault();
         $('.video-overlay').addClass('open');
-        $(".video-overlay").append('<iframe width="560" height="315" src="https://www.youtube.com/embed/Giek094C_l4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+        $(".video-overlay").append('<iframe width="560" height="315" src="https://drive.google.com/file/d/1BZR5HM2dwETR8H1rA8BlTuj3pzF9HI_R/preview" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
       });
 
       $('.video-overlay, .video-overlay-close').on('click', function (e) {
